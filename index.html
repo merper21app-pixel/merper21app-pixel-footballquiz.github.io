@@ -4,43 +4,156 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Football Quiz — Privacy Policy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bungee&family=Barlow:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
-body{font-family:-apple-system,Segoe UI,Roboto,sans-serif;max-width:760px;margin:40px auto;padding:0 20px;line-height:1.6;color:#22252A;background:#F7F4EC}
-h1{color:#166533}h2{color:#166533;margin-top:32px}
-a{color:#166533}
-.updated{color:#6B7280;font-size:14px}
+:root{
+  --grass-top:#2A8C46; --grass-mid:#166533; --grass-bottom:#0C4522;
+  --ink:#10261A; --ink-deep:#04150C; --ink-border:rgba(255,255,255,.12);
+  --gold:#FFD23F; --gold-top:#FFE270; --gold-bottom:#F2A600; --gold-shadow:#A96E00;
+  --chalk:#FFFFFF; --chalk-muted:rgba(255,255,255,.72);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:'Barlow',sans-serif;
+  color:var(--chalk);
+  line-height:1.65;
+  min-height:100vh;
+  background:
+    repeating-linear-gradient(90deg,transparent,transparent 44px,rgba(255,255,255,.03) 44px,rgba(255,255,255,.03) 88px),
+    linear-gradient(180deg,var(--grass-top),var(--grass-mid) 55%,var(--grass-bottom));
+  background-attachment:fixed;
+  padding:24px 16px 60px;
+}
+.wrap{max-width:780px;margin:0 auto}
+
+/* Cabecera tipo marcador */
+.scoreboard{
+  background:linear-gradient(180deg,var(--gold-top),var(--gold) 45%,var(--gold-bottom));
+  border:4px solid var(--ink-deep);
+  border-radius:22px;
+  box-shadow:0 10px 0 var(--gold-shadow),0 16px 24px rgba(0,0,0,.35);
+  padding:26px 24px;
+  text-align:center;
+  margin:20px 0 14px;
+}
+.scoreboard .kicker{
+  font-family:'Barlow',sans-serif;font-weight:700;
+  font-size:12px;letter-spacing:3px;text-transform:uppercase;
+  color:var(--ink-deep);opacity:.75;
+}
+.scoreboard h1{
+  font-family:'Bungee',cursive;
+  font-size:clamp(26px,6vw,40px);
+  color:var(--ink-deep);
+  line-height:1.05;margin-top:6px;
+  text-shadow:0 2px 0 rgba(255,255,255,.35);
+}
+.ball{font-size:30px;display:block;margin-bottom:4px}
+
+.updated{
+  text-align:center;color:var(--chalk-muted);
+  font-size:13px;letter-spacing:1px;text-transform:uppercase;
+  font-weight:600;margin-bottom:24px;
+}
+
+/* Tarjetas de sección */
+.card{
+  background:linear-gradient(180deg,rgba(16,38,26,.94),rgba(4,21,12,.94));
+  border:3px solid var(--ink-deep);
+  border-radius:18px;
+  box-shadow:0 6px 0 var(--ink-deep),0 10px 18px rgba(0,0,0,.28);
+  padding:22px 22px 20px;
+  margin-bottom:18px;
+}
+.card h2{
+  font-family:'Bungee',cursive;
+  font-size:16px;
+  color:var(--gold);
+  margin-bottom:10px;
+  display:flex;align-items:center;gap:10px;
+}
+.num{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:30px;height:30px;flex:none;
+  background:linear-gradient(180deg,var(--gold-top),var(--gold-bottom));
+  color:var(--ink-deep);
+  border:2px solid var(--ink-deep);border-radius:8px;
+  font-family:'Bungee',cursive;font-size:13px;
+  box-shadow:0 3px 0 var(--gold-shadow);
+}
+.card p{color:var(--chalk-muted);font-weight:500;margin-top:6px}
+.card p:first-of-type{margin-top:0}
+.card a{color:var(--gold);font-weight:600;word-break:break-word}
+
+.intro{
+  text-align:center;color:var(--chalk);font-weight:600;
+  font-size:15px;margin-bottom:22px;padding:0 6px;
+}
+
+footer{
+  text-align:center;margin-top:30px;
+  color:var(--chalk-muted);font-size:12px;
+  letter-spacing:1px;text-transform:uppercase;font-weight:600;
+}
 </style>
 </head>
 <body>
-<h1>Privacy Policy — Football Quiz</h1>
-<p class="updated">Last updated: 26 July 2026</p>
+<div class="wrap">
 
-<p>This Privacy Policy describes how the Football Quiz mobile application ("the App", "we", "us") handles information. By using the App you agree to this policy.</p>
+  <div class="scoreboard">
+    <span class="ball">⚽</span>
+    <div class="kicker">Football Quiz</div>
+    <h1>Privacy Policy</h1>
+  </div>
+  <p class="updated">Last updated · 26 July 2026</p>
 
-<h2>1. No account, no personal data collected by us</h2>
-<p>The App does not require you to create an account or sign in. We do not ask for, collect, or store your name, email address, phone number, or any other personal identifying information on our servers. In fact, the App has no servers of its own.</p>
+  <p class="intro">This policy explains how the Football Quiz app handles information. By playing, you agree to it.</p>
 
-<h2>2. Data stored on your device</h2>
-<p>Your game progress — including your streak, experience points, level, rank, achievements, statistics, chosen avatar, and settings — is stored locally on your device only. This information stays on your phone and is not transmitted to us. If you uninstall the App, this data is removed.</p>
+  <div class="card">
+    <h2><span class="num">1</span> No account needed</h2>
+    <p>The App does not require you to create an account or sign in. We do not ask for, collect, or store your name, email, phone number, or any other personal identifying information on our servers. The App has no servers of its own.</p>
+  </div>
 
-<h2>3. Advertising</h2>
-<p>The App is free and supported by advertising provided by Google AdMob. To serve ads, Google and its partners may collect and use certain information, such as a device advertising identifier, general location (derived from IP address), and app usage data, in accordance with Google's policies.</p>
-<p>In regions where it is required (such as the European Economic Area and the United Kingdom), the App presents a consent form before serving personalised ads, allowing you to accept or decline. You can review Google's practices here: <a href="https://policies.google.com/technologies/partner-sites" target="_blank">https://policies.google.com/technologies/partner-sites</a>.</p>
+  <div class="card">
+    <h2><span class="num">2</span> Your progress stays on your phone</h2>
+    <p>Your streak, XP, level, rank, achievements, statistics, chosen avatar, and settings are stored locally on your device only. They are never sent to us. Uninstalling the App removes this data.</p>
+  </div>
 
-<h2>4. Analytics</h2>
-<p>The App may use Google's services to understand aggregate, anonymous usage (for example, how many players complete a quiz). This information does not identify you personally.</p>
+  <div class="card">
+    <h2><span class="num">3</span> Advertising</h2>
+    <p>The App is free and supported by ads from Google AdMob. To serve ads, Google and its partners may use information such as a device advertising identifier, general location (from IP address), and app usage data, in line with Google's policies.</p>
+    <p>Where required (such as the EEA and the UK), the App shows a consent form before serving personalised ads, so you can accept or decline. Google's practices: <a href="https://policies.google.com/technologies/partner-sites" target="_blank">policies.google.com/technologies/partner-sites</a></p>
+  </div>
 
-<h2>5. Children</h2>
-<p>The App is not directed at children under 13. We do not knowingly collect personal information from children.</p>
+  <div class="card">
+    <h2><span class="num">4</span> Analytics</h2>
+    <p>The App may use Google's services to understand aggregate, anonymous usage. This does not identify you personally.</p>
+  </div>
 
-<h2>6. Your choices</h2>
-<p>You can reset your advertising identifier or opt out of ad personalisation through your device settings, under Google → Ads. You can clear all locally stored data by uninstalling the App.</p>
+  <div class="card">
+    <h2><span class="num">5</span> Children</h2>
+    <p>The App is not directed at children under 13, and we do not knowingly collect personal information from children.</p>
+  </div>
 
-<h2>7. Changes to this policy</h2>
-<p>We may update this Privacy Policy from time to time. The "last updated" date at the top reflects the latest revision.</p>
+  <div class="card">
+    <h2><span class="num">6</span> Your choices</h2>
+    <p>You can reset your advertising identifier or opt out of ad personalisation in your device settings, under Google → Ads. Uninstalling the App clears all locally stored data.</p>
+  </div>
 
-<h2>8. Contact</h2>
-<p>If you have any questions about this Privacy Policy, contact us at: <a href="mailto:merper21app@gmail.com">merper21app@gmail.com</a></p>
+  <div class="card">
+    <h2><span class="num">7</span> Changes</h2>
+    <p>We may update this policy from time to time. The date at the top reflects the latest revision.</p>
+  </div>
 
+  <div class="card">
+    <h2><span class="num">8</span> Contact</h2>
+    <p>Questions about this policy? Reach us at <a href="mailto:merper21app@gmail.com">merper21app@gmail.com</a></p>
+  </div>
+
+  <footer>⚽ Football Quiz · Daily Football Trivia</footer>
+
+</div>
 </body>
 </html>
